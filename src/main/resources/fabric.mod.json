@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "emptyserverkick",
+  "version": "${version}",
+  "name": "EmptyServerKick",
+  "description": "Kicks a player off the server after 10 minutes if they're the only one online",
+  "authors": [
+    "nobodywasishere"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/emptyserverkick/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "net.eowyn.emptyserverkick.EmptyServerKick"
+    ]
+  },
+  "mixins": [
+    "emptyserverkick.mixins.json",
+    {
+      "config": "emptyserverkick.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
